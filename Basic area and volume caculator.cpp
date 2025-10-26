@@ -43,6 +43,7 @@ int main() {
         else {
             cout << "Invalid input";
         }
+        cout << "The area of the shape you selected is " << Area << endl;
     }
     else if (AreaOrVolumeCalculation == "Volume") {
         string Shape;
@@ -52,7 +53,7 @@ int main() {
             double LengthOfSide;
             cout << "Please enter the length of any of the sides of the cube: " << endl;
             cin >> LengthOfSide;
-            Area = LengthOfSide * LengthOfSide * LengthOfSide;
+            Volume = LengthOfSide * LengthOfSide * LengthOfSide;
         }
         else if (Shape == "cuboid") {
             double Width;
@@ -60,17 +61,18 @@ int main() {
             double Depth;
             cout << "Please enter the Width Height and Depth of the cuboid: " << endl;
             cin >> Width >> Height >> Depth;
-            Area = Width * Height * Depth;
+            Volume = Width * Height * Depth;
         }
         else if (Shape == "sphere") {
             double Radius;
             cout << "Please enter the radius of the shpere: " << endl;
             cin >> Radius;
-            Area = (4 * ((Radius * Radius * Radius) * Pi)) / 3.0;
+            Volume = (4 * ((Radius * Radius * Radius) * Pi)) / 3.0;
         }
         else {
             cout << "Invalid input";    
         }
+        cout << "The volume of the shape you selected is " << Volume << endl;
     }
     else {
         cout << "Invalid input";
